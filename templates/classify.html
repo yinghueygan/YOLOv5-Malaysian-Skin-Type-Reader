@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Malaysian Skin Type Reader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+
+    <nav class="nav-index">
+      <div class="navbar">
+        <h1 class="title">Skin Analysis<span><span></h1>
+        <ul>
+          <li><a href="{{url_for('home')}}">Home</a></li>
+          <li><a href="{{url_for('about')}}">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="file-container">
+      <form action="/submit" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <h3 class="upload-title">Upload Your Face Image :</h3>
+          <div class="btn2 file-btn">
+            <i class='bx bxs-cloud-upload icon'></i>
+            <label for="inputfile">BROWSE IMAGE</label>
+            <input type="file" name="file" class="form-control-file" id="inputfile" style="display:none;">
+          </div>&nbsp&nbsp&nbsp&nbsp&nbsp
+          <button type="submit" class="btn2 submit-btn">SUBMIT</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+          <button type="submit" class="btn2 live-btn"><a href="{{url_for('video_feed')}}">LIVELY DETECT</a></button>
+        </div>
+      </form>
+    </div>
+
+    <div class="img-container">
+      <h3 class="classify-img-title">FACIAL SKIN IMAGE</h3>
+      <img src="{{ url_for('display', filename=image_path) }}" class="classify-img" />
+    </div>
+
+    <div class="summary-container">
+      <h3 class="summary-title">SKIN SUMMARY</h3>
+      <h3 class="line2">_______________</h3>
+      <div class="summary">
+        {% if error_message %}
+          <p>{{ error_message }}</p>
+        {% endif %}
+          <h4>Skin Type: <i> {{skin_type_str}} </i></h4><br>
+          <p><b>Skin Conditions: </b></p>
+          <p>{{skin_condition_str}}</p><br>
+
+          {% if skin_type_str == 'Oily' %}
+            <p class="summary-text"><b>Reason: </b></p>
+            <p class="summary-text"> Your skin shows large amount of acne blemishes, shine, blackheads, enlarged pores, etc.</p>
+            <button class="btn3 details-btn"><a href="{{url_for('product_oily')}}">View Skincare Product</a></button>
+          {% endif %}
+
+          {% if skin_type_str == 'Dry' %}
+          <p class="summary-text"><b>Reason: </b></p>
+          <p class="summary-text"> Your skin exhibits tightness, roughness and less elasticity. Additionally, your skin boasts fewer acne blemishes, oiliness, enlarged pores and unevenness.</p>
+          <button class="btn3 details-btn"><a href="{{url_for('product_dry')}}">View Skincare Product</a></button>
+          {% endif %}
+
+          {% if skin_type_str == 'Sensitive' %}
+            <p class="summary-text"><b>Reason: </b></p>
+            <p class="summary-text"> Your skin shows facial redness, irritation and acne blemishes.</p>
+            <button class="btn3 details-btn"><a href="{{url_for('product_sensitive')}}">View Skincare Product</a></button>
+          {% endif %}
+
+          {% if skin_type_str == 'Normal' %}
+            <p class="summary-text"><b>Reason: </b></p>
+            <p class="summary-text"> Your skin is exquisitely smooth, devoid of any acne, enlarged pores, unevenness, redness, or excessive oiliness or dryness.</p>
+            <button class="btn3 details-btn"><a href="{{url_for('product_normal')}}">View Skincare Product</a></button>
+          {% endif %}
+      </div>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- js for browse image to upload -->
+    <script>
+      $('#inputfile').change(function() {
+        var i = $(this).prev('label').clone();
+        var file = $('#inputfile')[0].files[0].name;
+        $(this).prev('label').text(file);
+      });
+    </script>
+
+    <!-- js for display detected skin condition image -->
+    <script>
+      document.getElementById("my-image").onload = function() {
+        this.style.display = "block";
+      };
+    </script>
+
+	</body>
+</html>

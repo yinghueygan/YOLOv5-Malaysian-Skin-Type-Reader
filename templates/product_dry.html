@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Malaysian Skin Type Reader</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <nav class="nav-index">
+            <div class="navbar">
+              <h1 class="title">Skincare Product List<span><span></h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('classify')}}">Skin Analysis</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h2 class="tips-title">Skin Type: Dry</h2>
+        <h2 class="line">_______________</h2>
+        <div class="product-container">
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/dry_cleanser.jpeg') }}" alt="dry cleanser">
+            <div class="product-box-text">
+              <h3>Name: Neutrogena Hydro Boost Hydrating Cleansing Gel</h3>
+              <p>Description: A cleanser that contains hyaluronic acid to wash away dirt and oil <br>without stripping skin's natural oils. It locks in moisture, leaving skin clean and <br>soft to the touch. It is also free of fragrance, oil and alcohol to avoid further <br>irritation and relieve any existing irritation.</p>
+              <p>To solve: <span>dehydration</span>&nbsp&nbsp<span>tightness</span></p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/dry_toner.jpeg') }}" alt="dry_toner">
+            <div class="product-box-text">
+              <h3>Name: Thayers Alcohol-Free Rose Petal Witch Hazel Toner</h3>
+              <p>Description: A toner that helps to balance the skin's pH and provides additional <br>hydration. It is alcohol-free and contains aloe vera that can hydrate skin all day <br>as well as glycerin that helps maintain skin's moisture barrier.</p>
+              <p>To solve: <span>dehydration</span>&nbsp&nbsp<span>tightness</span>&nbsp&nbsp<span>roughness</span></p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/dry_moisturizer.jpg') }}" alt="dry moisturizer">
+            <div class="product-box-text">
+              <h3>Name: CeraVe Moisturizing Cream</h3>
+              <p>Description: A moisturizer that helps replenish skin's existing ceramides, <br>relieves dry skin by reducing moisture loss, increases hydration and helps <br>restore the skin barrier. It contains ceramides, hyaluronic acid that can provide <br>long-lasting hydration. </p>
+              <p>To solve: <span>dehydration</span>&nbsp&nbsp<span>tightness</span>&nbsp&nbsp<span>roughness</span>&nbsp&nbsp<span>fine lines</span></p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/dry_oil.jpg') }}" alt="dry facial oil">
+            <div class="product-box-text">
+              <h3>Name: The Ordinary 100% Organic Cold-Pressed Moroccan <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Argan Oil</h3>
+              <p>Description: Adding a facial oil to skincare routine can provide an extra boost <br>of hydration and nourishment for dry skin. It can also reduces the appearance <br>of flaking.</p>
+              <p>To solve: <span>dehydration</span>&nbsp&nbsp<span>tightness</span>&nbsp&nbsp<span>roughness</span>&nbsp&nbsp<span>fine lines</span></p>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>

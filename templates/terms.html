@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Malaysian Skin Type Reader</title>
+		    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+      <div class="container2">
+        <div class="terms-body">
+          <div class="terms-box">
+            <h2 class="terms-title">TERMS AND CONDITIONS</h2>
+            <h2 class="line">____________________</h2>
+            <div class="terms-text">
+                <p>Last edit: 3/3/2023</p><br><br>
+                <p>Greeting Users,</p><br><br><br>
+                <p>Skin Type Reader will not store your facial skin images.</p><br>
+                <p>Skin Type Reader do not link to any individual profiling.</p><br>
+                <p>The facial skin image in the Skin Type Reader is only use for skin type analysis and skincare product recommendation.</p>
+            </div>
+            <h4>I agree to the <span>TERMS AND CONDITIONS</span> and consent to the scanning of my face as described at the above.</h4>
+            <div class="buttons">
+              <button class="btn accept-btn"><a href="{{url_for('tips')}}">Accept</a></button>
+              <button class="btn cancel-btn"><a href="{{url_for('home')}}">Decline</a></button>
+            </div>
+          </div>
+      </div>
+      </div>
+    </body>
+</html>

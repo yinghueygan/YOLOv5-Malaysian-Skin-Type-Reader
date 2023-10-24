@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Malaysian Skin Type Reader</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <nav class="nav-index">
+            <div class="navbar">
+              <h1 class="title">Skincare Product List<span><span></h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('classify')}}">Skin Analysis</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h2 class="tips-title">Skin Type: Oily</h2>
+        <h2 class="line">_______________</h2>
+        <div class="product-container">
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/oily_cleanser.jpg') }}" alt="oily cleanser">
+            <div class="product-box-text">
+              <h3>Name: Neutrogena Oil-Free Acne Wash</h3>
+              <p>Description: A cleanser that removes excess oil without stripping skin of its <br>natural moisture. It contains salicylic acid, which helps to clear acne and <br>prevent future breakouts. It removes oil and unclogs pores and blackheads.</p>
+              <p>To solve: <span>acne</span>&nbsp&nbsp<span>breakouts</span>&nbsp&nbsp<span>enlarged pores</span>&nbsp&nbsp<span>blackheads</span></p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/oily_toner.jpg') }}" alt="oily toner">
+            <div class="product-box-text">
+              <h3>Name: Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant</h3>
+              <p>Description: A toner that helps to unclog pores and remove any remaining <br>traces of dirt and oil. It contains salicylic acid, which can help to clear acne and <br>blackheads. Pores appear smaller and skin texture is smoother and more even.</p>
+              <p>To solve: <span>acne</span>&nbsp&nbsp<span>enlarged pores</span>&nbsp&nbsp<span>blackheads</span></p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/oily_moisturizer.jpg') }}" alt="oily moisturizer">
+            <div class="product-box-text">
+              <h3>Name: Clinique Dramatically Different Moisturizing Gel</h3>
+              <p>Description: A moisturizer that delivers 8 hours of lightweight and oil-free <br>hydration. It is a lightweight and oil-free moisturizer that won't clog pores.</p>
+              <p>To solve: <span>rough and uneven texture</span>&nbsp&nbsp<span>dehydration</span></p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/oily_sunscreen.jpg') }}" alt="oily sunscreen">
+            <div class="product-box-text">
+              <h3>Name: Neutrogena Clear Face Oil-Free Sunscreen</h3>
+              <p>Description: A sunscreen that protects the skin from UV damage and prevents <br>premature aging. It is oil-free and non-comedogenic and is able to get protection <br>from the sun without acne breakouts.</p>
+              <p>To solve: <span>breakouts</span>&nbsp&nbsp<span>oiliness of skin</span>&nbsp&nbsp<span>fine lines</span></p>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>

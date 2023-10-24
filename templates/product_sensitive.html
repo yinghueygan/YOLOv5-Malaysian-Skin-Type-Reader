@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Malaysian Skin Type Reader</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <nav class="nav-index">
+            <div class="navbar">
+              <h1 class="title">Skincare Product List<span><span></h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('classify')}}">Skin Analysis</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h2 class="tips-title">Skin Type: Sensitive</h2>
+        <h2 class="line">____________________</h2>
+        <div class="product-container">
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/sensitive_cleanser.jpg') }}" alt="sensitive cleanser">
+            <div class="product-box-text">
+              <h3>Name: La Roche-Posay Toleriane Hydrating Gentle Cleanser</h3>
+              <p>Description: A cleanser that is mild, fragrance-free and specifically formulated <br> for sensitive skin. It gently cleanses skin of dirt, makeup and impurities while <br> maintaining skin's natural moisture barrier and pH.</p>
+              <p>To solve: <span>irritation</span>&nbsp&nbsp<span>redness</span>&nbsp&nbsp<span>tightness</span>&nbsp&nbsp<span>acne</span></p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/sensitive_toner.jpg') }}" alt="sensitive toner">
+            <div class="product-box-text">
+              <h3>Name: Klairs Supple Preparation Unscented Toner</h3>
+              <p>Description: A soothing toner that is alcohol-free and formulated for sensitive <br>skin can help to restore the skin's pH balance and calm irritation. It is a <br>non-irritating toner that rejuvenates and restores the skin. Balances the <br> skin's pH level and improves the effectiveness of the entire skin regime.</p>
+              <p>To solve: <span>irritation</span>&nbsp&nbsp<span>redness</span></p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/sensitive_lotion.jpeg') }}" alt="sensitive moisturizer">
+            <div class="product-box-text">
+              <h3>Name: CeraVe Daily Moisturizing Lotion</h3>
+              <p>Description: A gentle moisturizer that is fragrance-free, hypoallergenic and <br> formulated with ingredients to help hydrate, soothe and prevent skin sensitivity. <br> It contains ceramides that can hydrate the skin and restore its protective barrier <br> without causing irritation.</p>
+              <p>To solve: <span>irritation</span>&nbsp&nbsp<span>redness</span>&nbsp&nbsp<span>tightness</span></p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/sensitive_sunscreen.jpeg') }}" alt="sensitive sunscreen">
+            <div class="product-box-text">
+              <h3>Name: Aveeno Positively Mineral Sensitive Skin Sunscreen</h3>
+              <p>Description: A mineral-based sunscreen that contains 100% zinc oxide and <br> nourishing oat, which are less likely to cause irritation in sensitive skin.</p>
+              <p>To solve: <span>irritation</span>&nbsp&nbsp<span>redness</span></p>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>

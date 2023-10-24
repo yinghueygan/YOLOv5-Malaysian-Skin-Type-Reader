@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Malaysian Skin Type Reader</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+	<body>
+		<div class="container2">
+			<nav>
+				<div class="navbar">
+					<h1 class="title">Skin Type Reader<span><span></h1>
+					<ul>
+						<li><a href="{{url_for('home')}}">Home</a></li>
+						<li><a href="{{url_for('about')}}">About</a></li>
+					</ul>
+				</div>
+			</nav>
+      		<div class="content">
+				<h1>SKIN TYPE READER</h1><br>
+				<p>The easiest way to determine your skin type and determine the best skincare products for<br>your skin type through personalized analysis. Our Skin Type Reader technology scans your<br>face within a minutes to identify your skin problems. It's as easy as taking a selfie. </p>
+				<p>Try it now.</p>
+
+				<button class="start-btn"><a href="{{url_for('terms')}}">Start Analysis</a></button>
+			</div>
+		</div>
+	</body>
+</html>

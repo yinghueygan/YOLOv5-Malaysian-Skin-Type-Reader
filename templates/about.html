@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Malaysian Skin Type Reader</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <div class="container2">
+            <nav class="nav-index">
+                <div class="navbar">
+                <h1 class="title">About Us<span><span></h1>
+                    <ul>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                        <li><a href="{{url_for('about')}}">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="about">
+                <div class="about-img">
+                    <img src="{{ url_for('static', filename='css/img/about.jpg') }}" alt="about us">
+                </div>
+                <div class="about-text">
+                    <h2>ABOUT SKIN TYPE READER</h2>
+                    <h2>_________________________</h2>
+                    <p>Skin Type Reader is an application that can help you <br>to determine your skin type within a minutes in just a snap. <br>An Artificial Intelligence technology is used to provide you <br>with high precision skin type results. It also recommends <br>skincare products to users based on their skin type.</p>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

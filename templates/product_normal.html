@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Malaysian Skin Type Reader</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <nav class="nav-index">
+            <div class="navbar">
+              <h1 class="title">Skincare Product List<span><span></h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('classify')}}">Skin Analysis</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <h2 class="tips-title">Skin Type: Normal</h2>
+        <h2 class="line">___________________</h2>
+        <div class="product-container">
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/normal_cleanser.jpg') }}" alt="normal cleanser">
+            <div class="product-box-text">
+              <h3>Name: Cetaphil Gentle Skin Cleanser</h3>
+              <p>Description: A gentle, non-foaming cleanser that removes dirt and oil without <br>stripping the skin of its natural oils. It cleans to remove dirt and impurities while <br>retaining the skin's natural moisture barrier.</p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/normal_toner.jpg') }}" alt="normal toner">
+            <div class="product-box-text">
+              <h3>Name: Kiehl's Calendula Herbal-Extract Toner</h3>
+              <p>Description: A hydrating toner that gently soothes and refreshes skin. It <br>cleanses skin without harsh or synthetic drying agents.</p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/normal_moisturizer.jpg') }}" alt="normal moisturizer">
+            <div class="product-box-text">
+              <h3>Name: Olay Regenerist Micro-Sculpting Cream</h3>
+              <p>Description: A lightweight, hydrating moisturizer that helps to keep the skin soft <br>and supple. It leaves skin hydrated, softens the look of fine lines and wrinkles <br>and firms the look of skin with plumping hydration.</p>
+            </div>
+          </div>
+          <div class="product-box">
+            <img class="product-box-img" src="{{ url_for('static', filename='css/img/normal_sunscreen.jpg') }}" alt="normal sunscreen">
+            <div class="product-box-text">
+              <h3>Name: EltaMD UV Clear Facial Sunscreen</h3>
+              <p>Description: A broad-spectrum sunscreen that protects the skin from UVA and <br>UVB rays. It contains vitamin B3, hyaluronic acid and lactic acid that promote <br>the appearance of healthy-looking skin. It is very lightweight that doesn't leave <br>a white cast or feel greasy on the skin. </p>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>

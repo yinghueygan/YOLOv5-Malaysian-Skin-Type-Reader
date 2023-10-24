@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Malaysian Skin Type Reader</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <nav class="nav-index">
+            <div class="navbar">
+              <h1 class="title">Facial Skin Detection<span><span></h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <h2 class="tips-title">Tips on Detecting Facial Skin</h2>
+        <h2 class="line">_____________________________</h2>
+        <section class="tips">
+            <div class="card-container">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='css/img/tip1.jpg') }}" alt="tip 1">
+                    <p class="card-title">Remove glasses and makeup.</p>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='css/img/tip1.jpg') }}" alt="tip 2">
+                    <p class="card-title">Ensure natural lighting.</p>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='css/img/tip1.jpg') }}" alt="tip 3">
+                    <p class="card-title">Look straight to the camera.</p>
+                </div>
+            </div>
+        </section>
+        <div class="btn-container">
+            <button class="detect-btn"><a href="{{url_for('classify')}}">Detect Your Face</a></button>
+        </div>
+    </body>      
+</html>
