@@ -2,7 +2,8 @@
 ## yolov5_skin_condition_detection folder: the source code for training the YOLOv5 model.
 ## the other folders and files: the source code of the Skin Type Reader system.
 
-This application, skin type reader focuses on analyzing the facial skin of Malaysians with object detection and deep learning algorithms. YOLOv5 is employed to detect users' facial skin conditions, such as acne, pigment, enlarged pores, uneven skin, blackheads, etc. Then, based on the detected skin conditions, it further classifies the user's skin type into the normal, oily, sensitive, or dry groups. Facial skin images of Malaysians are collected as the datasets used to train the YOLOv5 model. 
+This application, skin type reader focuses on analyzing the facial skin of Malaysians with object detection and deep learning algorithms. YOLOv5 is employed to detect users' facial skin conditions, such as acne, pigment, enlarged pores, uneven skin, blackheads, etc. Then, based on the detected skin conditions, it further classifies the user's skin type into the normal, oily, sensitive, or dry groups. Based on the classified skin type, the system can also provide skincare products suitable for the user’s 
+skin type. Facial skin images of Malaysians are collected as the datasets used to train the YOLOv5 model. 
 
 YOLOv5 model is trained using Python via Google Colaboratory. The user interface of the system is developed using HTML, CSS, JavaScript via Atom. In order to integrate between the trained YOLOv5 model and the user interface, Flask is used with Visual Studio Code. Flask provides a simple and straightforward approach to render HTML templates and transfer data from Python model to these HTML templates.
 
